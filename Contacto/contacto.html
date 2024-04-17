@@ -36,9 +36,7 @@
 
     <main>
         <div id="homediv">
-            <div id="títulos">
-                <h1>Formulario de Contacto</h1>
-            </div>
+            <h1>Formulario de Contacto</h1>
         </div>
         <section class="form-section">
             <form id="contact-form" action="#" method="POST">
@@ -68,15 +66,17 @@
                     <option value="9">Biblioteca</option>
                 </select><br><br>
     
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
     
                 <div class="field-group captcha-field js-captcha-field">
                     <label id="login-form-captcha" for="login-form-captcha" accesskey="c">Introduzca la palabra que se muestra debajo</label>
                     <input type="text" name="captcha" id="login-form-captcha" class="text medium-field captcha-response js-captcha-input">
                 </div>
                 <div class="field-group captcha-field js-captcha-field">
-                    <img class="js-captcha-img captcha-img" height="100px" width="200px" src="img/captcha_ts=62">
+                    <img class="js-captcha-img captcha-img" height="100px" width="200px" src="img/captcha_ts=62.jpg">
                     <span class="aui-icon icon-reload js-captcha-reload captcha-reload" title="Actualizar imagen"></span>
                 </div>            
     

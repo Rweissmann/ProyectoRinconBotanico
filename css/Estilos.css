@@ -1,367 +1,143 @@
-* {
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    /*font-optical-sizing: auto;  >>correccion validator w3<<  */
-    font-weight: 400;
-    font-style: normal;
-    color: black;
 }
 
 .header {
-    display:flex;
-    background-color: #d8f2dc;
-    height: 50px;
-    width: 100vw;
-    padding: 20px;
-    position: fixed;
-}
-
-.header nav {
+    background-color: #00800f;
+    color: #fff;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-#headerrh {
-    display:flex;
-    float:right;
+.logo img {
+    width: 100px; /* Ajustemos el tamaño del logo según sea necesario */
 }
 
-#logo {
-    width: 12%;
-}
-
-a {
-    color: #3fa64e;
-    padding: 5px;
-    margin: 20px 8px;
-}
-
-a:hover {
-    background-color: rgb(63, 166, 78, 7%);
-    border-radius: 10px;
-    color: #3fa64e;
-    font-weight: 500;
-}
-
-a:active {
-    background-color: #d8f2dc;
-    border-radius: 10px;
-    color: #d97014;
-    font-weight: 700;
-}
-main {
-padding:30px; 
-}
-
-#homediv {
-    padding: 10px;
-    display: flex;
-    overflow: auto;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 85vh;
-    background-image: url(../img/Home/fondo-jacaranda.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0dvh;
-    /*para que la background-image se apoye en el borde inferior de la pantalla*/
-    /*position:relative */
-
-}
-
-.titulos {
-    display: flex;
+.navbar ul {
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-h1 {
-    margin: 2vh;
-    color: #d97014;
-    font-weight: 600;
+.navbar ul li {
+    display: inline-block;
+    margin-left: 40px;
 }
 
-h2 {
-    margin: 2vh;
-    color: #d97014;
-    font-weight: 500;
+.navbar ul li:first-child {
+    margin-left: 0;
 }
 
-#frase {
-    margin: 2vh;
-    color: #d97014;
-    font-size: 1.2em;
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
-#agregar {
-    padding: 10px;
-    margin: 20px;
-    background-color: #d8f2dc;
-    color: #3fa64e;
-    border-radius: 10px;
-    width: fit-content;
-}
-
-#newsletter {
-    padding: 10px;
-    margin: 20px;
-    background-color: #d8f2dc;
-    color: #3fa64e;
-    border-radius: 10px;
-    width: fit-content;
-}
-
-.contenedor {
-    height: 100px;
+.hero {
+    background-image: url('../img/Home/fondo-jacaranda.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajustemos la altura según sea necesario */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content: space-around;
-    align-items: flex-end;
-    margin-top: auto;
-    /*para que se ubique en el bottom del main*/
+    align-items: center;
 }
 
-.categoría {
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30%;
-    height: 80px;
-    max-width: 400px;
-    background-color: #d97014;
-    padding: 10px 20px;
-    margin: 10px;
+.newsletter {
+    background-color: rgba(255, 255, 255, 0.652); /* Fondo semitransparente */
+    padding: 20px;
     text-align: center;
 }
 
-.imgcateg {
-    height: 120%;
-    border-radius: 20px;
+.newsletter h2 {
+    margin-bottom: 10px;
 }
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #d66000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 1;
+    max-width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card-content {
+    padding: 15px 0;
+  }
+  
+  .card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1em;
+    color: #333;
+  }
+  
 
 .footer {
+    background-color: #00800f;
+    color: #fff;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #d8f2dc;
-    height: 110px;
 }
 
-#mapadesitio {
-    /*display: none*/
-    font-size: 0.8rem;
-    display: flex;
-    float: left;
+.mapa-sitio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Establece la visualización como flexbox */
 }
 
-footer h4 {
-    color: #3fa64e
+.mapa-sitio ul li {
+    margin-right: 20px; /* Ajusta el espaciado entre elementos */
 }
 
-/*#mapacolumna1 {
-    display:flex;
-    float:left;
-}
-#mapacolumna2 {
-    display:flex;
-    float:left;
-}*/
-
-i {
-    color: #3fa64e;
-    padding: 10px;
-    margin: 20px 10px;
-    font-size: 2em;
+.mapa-sitio ul li:last-child {
+    margin-right: 0; /* Elimina el margen del último elemento */
 }
 
-#redes {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.mapa-sitio ul li a {
+    text-decoration: none;
+    color: #fff;
 }
 
-/*PUNTOS DE CORTE*/
-/* For mobile phones: */
-[class*="col-"] {
-    /*a todas las clases que comiencen con col- ponele 100%*/
-    width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-
-    /* entonces >= 600px  */
-    /* For tablets: */
-    .col-s-1 {
-        width: 8.33%;
-    }
-
-    /* 100/12  */
-    .col-s-2 {
-        width: 16.66%;
-    }
-
-    /* 100/12*2  */
-    .col-s-3 {
-        width: 25%;
-    }
-
-    .col-s-4 {
-        width: 33.33%;
-    }
-
-    .col-s-5 {
-        width: 41.66%;
-    }
-
-    .col-s-6 {
-        width: 50%;
-    }
-
-    .col-s-7 {
-        width: 58.33%;
-    }
-
-    .col-s-8 {
-        width: 66.66%;
-    }
-
-    .col-s-9 {
-        width: 75%;
-    }
-
-    .col-s-10 {
-        width: 83.33%;
-    }
-
-    .col-s-11 {
-        width: 91.66%;
-    }
-
-    .col-s-12 {
-        width: 100%;
-    }
-
-    /*  100/12*12  */
-}
-
-@media only screen and (min-width: 768px) {
-
-    /* entonces >=   */
-    /* For desktop: */
-    .col-1 {
-        width: 8.33%;
-    }
-
-    /*  100/12  */
-    .col-2 {
-        width: 16.66%;
-    }
-
-    /* 100/2*2  */
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.33%;
-    }
-
-    .col-5 {
-        width: 41.66%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-}
-
-/*Grid para Somos.html*/
-.grid-container {
-    width: auto;
-    height: auto;
-    display: grid;
-    background-color: #f2f2f2;
-}
-
-.somos {
-    display: grid;
-    grid-template-areas: "perfil perfil perfil";
-    justify-content: space-around;
-
-}
-
-.perfil {
-    width: auto;
-    min-width: 200px;
-    padding: 10px;
-    margin: 10px;
-    display: grid;
-    justify-content: space-evenly;
-    background-color: #d8f2dc;
-    border-radius: 10%;
-}
-
-.fotoperfil {
-    width: 90%;
-    border-radius: 50%;
-}
-
-h3 {
-    margin: 20px;
-    text-align: center;
-    font-weight: 500;
+.mapa-sitio ul li a:hover {
+    text-decoration: underline;
 }
 
 
-p {
-    margin: 10px;
-}
-
-/*Responsive para Perfiles de Somos.html*/
-@media screen and (max-width: 768px) {
-    .somos {
-        grid-template-areas: "header header"
-            "perfil perfil"
-            "footer footer";
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .somos {
-        grid-template-areas: "header"
-            "perfil"
-            "footer";
-    }
-}

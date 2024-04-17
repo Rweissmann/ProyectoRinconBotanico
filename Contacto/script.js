@@ -34,5 +34,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.onload = init;
-console.ward = function() {}; // what warnings?
+console.warn = function() {}; // what warnings?
+
 

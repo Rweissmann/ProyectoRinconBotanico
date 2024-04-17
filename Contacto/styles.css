@@ -10,14 +10,13 @@
     color: black;
 }
 
-/* Estilos para el encabezado */
 .header {
     background-color: #3fa64e;
     height: 50px;
     width: 100%;
     position: fixed;
     top: 0;
-    left: 20;
+    left: 0;
     z-index: 999;
 }
 
@@ -62,26 +61,18 @@ a:active {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0dvh;
-    /*para que la background-image se apoye en el borde inferior de la pantalla*/
-    /*position:relative */
-
-}
-
-/* Estilos para el texto "Formulario de Contacto" */
-#títulos {
-    margin-top: 2cm;
-    color: #d97014;
+    margin-top: auto;
+    color: #D97014;
+    font-weight: 700;
     font-size: 20px;
-    text-align: center;
+    text-align: auto;
 }
 
-/* Estilos para el formulario */
 form {
     position: relative;
     z-index: 1;
 }
 
-/* Estilos para el contenido principal */
 .main-content {
     display: flex;
     justify-content: space-between;
@@ -218,6 +209,27 @@ select:not(:placeholder-shown),
 #ubicacion:not(:placeholder-shown) {
     background-color: #D8F2DC; /* Color al escribir */
     color: black; /* Color del texto al escribir */
+}
+
+/* Estilos para las locaciones o mapas */
+.locations {
+    width: 100%; /* Para que ocupe todo el ancho de la página */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0; /* Eliminamos cualquier margen */
+    padding: 0; /* Eliminamos cualquier relleno */
+}
+
+.location {
+    width: calc(33.33% - 20px); /* Ajustamos el ancho para ocupar aproximadamente un tercio del ancho de la página */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Incluimos el ancho del borde y el relleno en el cálculo del ancho */
+}
+
+.location iframe {
+    width: 100%;
+    border: none; /* Eliminamos el borde del iframe */
 }
 
 .footer {
