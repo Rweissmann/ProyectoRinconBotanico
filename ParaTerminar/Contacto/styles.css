@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    /*font-optical-sizing: auto;  >>correccion validator w3<<  */
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+.header {
+    background-color: #3fa64e;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: #f2f2f2;
+    padding: 10px;
+    margin: 20px 10px;
+}
+
+a:hover {
+    background-color: #d8f2dc;
+    border-radius: 10px;
+    color: #3fa64e;
+    font-weight: 500;
+}
+
+a:active {
+    background-color: #d8f2dc;
+    border-radius: 10px;
+    color: #d97014;
+    font-weight: 700;
+}
+
+#logo {
+    width: 6%;
+}
+
+#homediv {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 85vh;
+    background-image: url('img/fondo-jacaranda.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0dvh;
+    margin-top: auto;
+    color: #D97014;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: auto;
+}
+
+form {
+    position: relative;
+    z-index: 1;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding: 10px;
+}
+
+/* Estilos para el formulario de contacto */
+.form-section {
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 40%; /* Limitamos el ancho al 40% de la página */
+    float: left; /* Alineamos a la izquierda */
+    margin-right: 20%; /* Agregamos margen derecho para mantener espacio */
+    margin-top: 70px; /* Margen superior para que el contenido comience debajo del encabezado */
+}
+
+/* Estilos para las preguntas */
+label {
+    background-color: #F2F2F2;
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    width: 100%; /* Establecemos el ancho al 100% para ocupar todo el espacio disponible */
+}
+
+/* Estilos para los cajones de las respuestas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select,
+#ubicacion,
+#area,
+#mensaje {
+    width: calc(100% - 15px); /* Ajustamos el ancho al 100% menos el ancho del borde */
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #D97014; /* Color inicial si no hay respuesta */
+    border: 1px solid #CCCCCC; /* Color del borde */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    color: #D97014; /* Color del texto */
+}
+
+/* Cambio de color al enfocar */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus,
+#ubicacion:focus,
+#area:focus,
+#mensaje:focus {
+    background-color: #D8F2DC; /* Color al enfocar */
+    color: black; /* Color del texto al enfocar */
+}
+
+/* Cambio de color al escribir */
+input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+input[type="tel"]:not(:placeholder-shown),
+textarea:not(:placeholder-shown),
+select:not(:placeholder-shown),
+#ubicacion:not(:placeholder-shown),
+#area:not(:placeholder-shown),
+#mensaje:not(:placeholder-shown) {
+    background-color: #D8F2DC; /* Color al escribir */
+    color: black; /* Color del texto al escribir */
+}
+
+/* Establecer el color del placeholder en blanco */
+::placeholder {
+    color: white;
+}
+
+/* Establecer el color del placeholder en blanco para los inputs y textareas específicos */
+#nombre::placeholder,
+#email::placeholder,
+#direccion::placeholder,
+#telefono::placeholder,
+#area::placeholder,
+#mensaje::placeholder {
+    color: white;
+}
+
+/* Estilos específicos para el campo de "Mensaje" */
+#mensaje {
+    height: 90px; /* Altura específica para el campo de mensaje */
+}
+
+/* Estilos específicos para el campo de "Área" */
+#area,
+#mensaje,
+#ubicacion {
+    font-size: 16px; /* Tamaño de fuente específico para el campo de área */
+    background-color: #D97014; /* Color de fondo */
+    border: 1px solid #CCCCCC; /* Color del borde */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 5px; /* Espaciado interno */
+    color: #D97014; /* Color del texto */
+}
+
+/* Cambio de color al enfocar para "Área", "Mensaje" y "Ubicación" */
+#area:focus,
+#mensaje:focus,
+#ubicacion:focus {
+    background-color: #D8F2DC; /* Color al enfocar */
+    color: black; /* Color del texto al enfocar */
+}
+
+/* Estilos específicos para los campos "Área que desea contactar", "Mensaje" e "Introduzca la palabra que se muestra abajo" */
+#area,
+#mensaje,
+#ubicacion {
+    width: calc(100% - 15px); /* Ajustamos el ancho al 100% menos el ancho del borde */
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #D97014; /* Color inicial si no hay respuesta */
+    border: 1px solid #CCCCCC; /* Color del borde */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    color: #D97014; /* Color del texto */
+}
+    
+/* Cambio de color al escribir para "Área que desea contactar", "Mensaje" e "Introduzca la palabra que se muestra abajo" */
+#area:not(:placeholder-shown),
+#mensaje:not(:placeholder-shown),
+#ubicacion:not(:placeholder-shown) {
+    background-color: #D8F2DC; /* Color al escribir */
+    color: black; /* Color del texto al escribir */
+}
+
+/* Estilos para las locaciones o mapas */
+.locations {
+    width: 100%; /* Para que ocupe todo el ancho de la página */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0; /* Eliminamos cualquier margen */
+    padding: 0; /* Eliminamos cualquier relleno */
+}
+
+.location {
+    width: calc(33.33% - 20px); /* Ajustamos el ancho para ocupar aproximadamente un tercio del ancho de la página */
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Incluimos el ancho del borde y el relleno en el cálculo del ancho */
+}
+
+.location iframe {
+    width: 100%;
+    border: none; /* Eliminamos el borde del iframe */
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3fa64e;
+    height: 50px;
+}
+
+#mapadesitio {
+    display: none
+}
+
+i {
+    color: #f2f2f2;
+    padding: 10px;
+    margin: 20px 10px;
+    font-size: 2em;
+}
+
+#redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*PUNTOS DE CORTE*/
+/* For mobile phones: */
+[class*="col-"] {
+    /*a todas las clases que comiencen con col- ponele 100%*/
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* entonces >= 600px  */
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    /* 100/12  */
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    /* 100/12*2  */
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    /*  100/12*12  */
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* entonces >=   */
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    /*  100/12  */
+    .col-2 {
+        width: 16.66%;
+    }
+
+    /* 100/2*2  */
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
+
+/*Grid para Somos.html*/
+.grid-container {
+    width: auto;
+    height: auto;
+    display: grid;
+    background-color: #f2f2f2;
+}
+
+.somos {
+    display: grid;
+    grid-template-areas: "perfil perfil perfil";
+    justify-content: space-around;
+
+}
+
+.perfil {
+    width: auto;
+    min-width: 200px;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    justify-content: space-evenly;
+    background-color: #d8f2dc;
+    border-radius: 10%;
+}
+
+.fotoperfil {
+    width: 90%;
+    border-radius: 50%;
+}
+
+h3 {
+    margin: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+p {
+    margin: 10px;
+}
+
+/*Responsive para Perfiles de Somos.html*/
+@media screen and (max-width: 768px) {
+    .somos {
+        grid-template-areas: "header header"
+            "perfil perfil"
+            "footer footer";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .somos {
+        grid-template-areas: "header"
+            "perfil"
+            "footer";
+    }
+}
