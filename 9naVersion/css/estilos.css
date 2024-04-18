@@ -12,16 +12,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw; /*FG - Para que ocupe siempre todo el ancho de la pantalla*/
 }
 
 .logo img {
     width: 100px; /* Ajustemos el tamaño del logo según sea necesario */
+    text-decoration: none; /* FG - Para mantener mismo estilo del header en el 'alt' del logo (si falta la imagen).*/
+    color: #fff; /*FG - Idem text-decoration*/
 }
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    float: left;
 }
 
 .navbar ul li {
@@ -36,6 +41,10 @@ body {
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
 }
 
 .hero {
@@ -74,8 +83,9 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: space-between;
-  }
+    justify-content: space-around; /*FG - Para que las cards de 2da línea queden menos separadas.*/
+    flex-wrap: wrap; /*FG - Para que desborde hacia abajo*/
+    }
   
   .card {
     flex: 1;
@@ -96,11 +106,27 @@ body {
     padding: 15px 0;
   }
   
-  .card-content h2 {
+  .card-content h2 { 
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color:#00800f;
+    text-decoration: none;
+  }
+
+  .card-content h5 {  /*FG - Ver con Pao. - Agregué este porque me parece q está como h5 en el html.*/
     font-size: 1.5em;
     margin-bottom: 10px;
   }
-  
+
+  .card-content a {  /* FG - Para agregar estilo título de las cards*/
+    text-decoration: none;
+    color: #00800f;
+  }
+
+.card-content a:hover { /* FG - Para agregar mismo estilo en el hover de las cards*/
+    text-decoration: underline;
+}
+
   .card-content p {
     font-size: 1em;
     color: #333;
@@ -114,6 +140,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    }
+.footer h5 {
+    margin-top: 10px; /*FG - Para dar separación entre la línea de ítems del Mapa de Sitio y el título de Redes Sociales en el modo mobile. */
 }
 
 .mapa-sitio ul {
@@ -121,6 +151,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex; /* Establece la visualización como flexbox */
+    flex-wrap:wrap;    
 }
 
 .mapa-sitio ul li {
@@ -140,3 +171,142 @@ body {
     text-decoration: underline;
 }
 
+
+/* FG - =====Agregamos css específico de somos.html=====*/
+.somos {
+    margin: 20px 10px;
+}
+    .somos p {
+        font-size: 1em;
+        color: #333;
+    }
+   
+    .somos .card {
+        min-width: 180px;
+        margin: 5px;
+    }
+    
+.card-container .img-somos {
+        border-radius: 50%;
+}
+/*====================================================*/
+
+
+/* FG - PUNTOS DE CORTE*/
+/* For mobile phones: */
+[class*="col-"] {
+    /*a todas las clases que comiencen con col- ponele 100%*/
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* entonces >= 600px  */
+    /* For tablets: */
+    .col-s-1 {
+        width: 8.33%;
+    }
+
+    /* 100/12  */
+    .col-s-2 {
+        width: 16.66%;
+    }
+
+    /* 100/12*2  */
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33%;
+    }
+
+    .col-s-5 {
+        width: 41.66%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33%;
+    }
+
+    .col-s-8 {
+        width: 66.66%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33%;
+    }
+
+    .col-s-11 {
+        width: 91.66%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    /*  100/12*12  */
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* entonces >=   */
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+
+    /*  100/12  */
+    .col-2 {
+        width: 16.66%;
+    }
+
+    /* 100/2*2  */
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}
