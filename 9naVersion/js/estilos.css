@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100vw; /*FG - Para que ocupe siempre todo el ancho de la pantalla*/
-}
+    }
 
 .logo img {
     width: 100px; /* Ajustemos el tamaño del logo según sea necesario */
@@ -25,17 +25,17 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    float: left;
+    display: flex; /* FG - Establece la visualización como flexbox */
+    float: left; /*FG - Para que desborde al achicar pantalla*/
 }
 
 .navbar ul li {
     display: inline-block;
-    margin-left: 40px;
-}
+    margin-right: 20px; /* FG - Cambio a margin-right para que 'Contacto' se vea completa al achicar pantalla.*/
+    }
 
 .navbar ul li:first-child {
-    margin-left: 0;
+    margin-left: 20px; /* FG - Agregamos margin que se despegue del logo al achicar pantalla*/
 }
 
 .navbar ul li a {
@@ -44,7 +44,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /*FG - Agregamos mismo estilo que en footer para 'hover'*/
 }
 
 .hero {
@@ -55,9 +55,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
 
-.newsletter {
+    .newsletter {
     background-color: rgba(255, 255, 255, 0.652); /* Fondo semitransparente */
     padding: 20px;
     text-align: center;
@@ -83,13 +83,14 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: space-around; /*FG - Para que las cards de 2da línea queden menos separadas.*/
+    justify-content: space-around; /*FG - Cambio a space-around para que las cards de 2da línea queden menos separadas.*/
     flex-wrap: wrap; /*FG - Para que desborde hacia abajo*/
     }
   
   .card {
-    flex: 1;
-    max-width: 30%;
+    /*flex: 1;
+    max-width: 30%;*/ /* FG - Dejo comentado por si acaso, ver cambio en línea siguiente.*/
+    max-width: 350px; /*FG - Cambio a max-width absoluto para que se ordenen hacia abajo al achicar pantalla. */
     border: 1px solid #ccc;
     border-radius: 8px;
     margin: 20px 0;
@@ -106,11 +107,9 @@ body {
     padding: 15px 0;
   }
   
-  .card-content h2 { 
+  .card-content h2 {   /*FG - Ver con Pao - Creo que no es h2 sino h5. Lo escribí a continuación*/
     font-size: 1.5em;
     margin-bottom: 10px;
-    color:#00800f;
-    text-decoration: none;
   }
 
   .card-content h5 {  /*FG - Ver con Pao. - Agregué este porque me parece q está como h5 en el html.*/
@@ -151,7 +150,7 @@ body {
     padding: 0;
     margin: 0;
     display: flex; /* Establece la visualización como flexbox */
-    flex-wrap:wrap;    
+    flex-wrap: wrap;  /*Para que desborde hacia abajo al achicar pantalla.*/  
 }
 
 .mapa-sitio ul li {
@@ -181,10 +180,10 @@ body {
         color: #333;
     }
    
-    .somos .card {
+   /* .somos .card {    FG - Agregué esto pero lo dejo comentado, por si acaso, porque lo arreglé diferente.
         min-width: 180px;
         margin: 5px;
-    }
+    }*/ 
     
 .card-container .img-somos {
         border-radius: 50%;
@@ -192,7 +191,7 @@ body {
 /*====================================================*/
 
 
-/* FG - PUNTOS DE CORTE*/
+/* FG - RESPONSIVE: PUNTOS DE CORTE*/
 /* For mobile phones: */
 [class*="col-"] {
     /*a todas las clases que comiencen con col- ponele 100%*/

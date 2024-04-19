@@ -96,6 +96,7 @@ body {
     margin: 20px 0;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
   }
   
   .card img {
@@ -131,7 +132,6 @@ body {
     color: #333;
   }
   
-
 .footer {
     background-color: #00800f;
     color: #fff;
