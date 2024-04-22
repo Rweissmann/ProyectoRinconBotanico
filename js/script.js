@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -16,24 +16,37 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 return false;
             }
         }
-        if (!validateCaptcha()) {
-            return false;
-        }
-        return true;
+        return true; // Añadir un retorno de valor true si el formulario pasa la validación
     }
 
-    function validateCaptcha() {
-        const userInput = document.getElementById('login-form-captcha').value.trim();
-        const correctCaptcha = "1234"; // Cambiar al valor correcto del CAPTCHA
-        if (userInput !== correctCaptcha) {
-            alert('Por favor, ingresa el CAPTCHA correctamente.');
-            return false;
-        }
-        return true;
-    }
+    const main = document.querySelector('main');
 });
 
-window.onload = init;
-console.warn = function() {}; // what warnings?
+$(document).ready(function() {
+    $('#privacyCheckbox').change(function() {
+        $('#submitButton').prop('disabled', !this.checked);
+    });
 
+    $('#contactForm').submit(function(event) {
+        event.preventDefault();
+        alert('Formulario enviado con éxito!');
+        $('#contactForm')[0].reset();
+        $('#submitButton').prop('disabled', true);
+    });
+});
 
+$('#prv_ck').change(function() {
+    console.log('ok changed');
+    $("#disabledInput").attr('disabled', !this.checked);
+});
+
+function dropDownSearch()
+{
+    elementClickSearh = '.nav2-search-icon';
+    elementSlideSearh = '#search_widget';
+    activeClassSearh = 'active';
+}
+
+$(document).ready(function() {
+    dropDownSearch();
+});

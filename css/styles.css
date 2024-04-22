@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,17 +15,36 @@ body {
     width: 100vw;
 }
 
-.header a {
-    color: #f2f2f2;
-    padding: 10px;
-    margin: 20px 10px;
-    border-radius: 10px;
+.logo img {
+    width: 100px; /* Reducir el tamaño del logo a la mitad */
+    text-decoration: none;
+    color: #fff;
 }
 
-.logo img {
-    width: 100px; /* Ajustemos el tamaño del logo según sea necesario */
-    text-decoration: none; /* FG - Para mantener mismo estilo del header en el 'alt' del logo (si falta la imagen).*/
-    color: #fff; /*FG - Idem text-decoration*/
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* FG - Establece la visualización como flexbox */
+    float: left; /*FG - Para que desborde al achicar pantalla*/
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px; /* FG - Cambio a margin-right para que 'Contacto' se vea completa al achicar pantalla.*/
+    }
+
+.navbar ul li:first-child {
+    margin-left: 20px; /* FG - Agregamos margin que se despegue del logo al achicar pantalla*/
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline; /*FG - Agregamos mismo estilo que en footer para 'hover'*/
 }
 
 .contenedor{
